@@ -1,0 +1,10 @@
+# Compiled binary
+calculate
+
+# Object files
+obj/
+
+# macOS junk
+.DS_Store
+*.dSYM/
+
