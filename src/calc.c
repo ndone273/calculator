@@ -26,10 +26,13 @@ enum status calculate(int arg1, int arg2, enum op op, int *result)
         *result = arg1 * arg2;
         return STATUS_OKAY;
     // Issue #149: add support for mult
+    
     case OP_DIV:
         // Issue #221: handle div by 0
+
         *result = arg1 / arg2;
         return STATUS_OKAY;
+    
     }
     return STATUS_UNSUPPORTED;
 }
