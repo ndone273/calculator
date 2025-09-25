@@ -22,25 +22,19 @@ enum status calculate(int arg1, int arg2, enum op op, int *result)
     case OP_SUB:
         *result = arg1 - arg2;
         return STATUS_OKAY;
-    case OP_MUL:
-        *result = arg1 * arg2;
-        return STATUS_OKAY;
     // Issue #149: add support for mult
-<<<<<<< 
-    
-=======
     case OP_MUL:
         *result = arg1 * arg2;
         return STATUS_OKAY;
     
+
     case OP_DIV:  // Issue #221: handle div by 0
         if (arg2 == 0) {
             fprintf(stderr, "Divide by Zero\n");
             return STATUS_DIV_BY_ZERO; // return 5 if that's how STATUS_DIV_BY_ZERO is defined
-        }
+            }
         *result = arg1 / arg2;
-            return STATUS_OKAY;
->>>>>>> issue221
+        return STATUS_OKAY;
     }
     return STATUS_UNSUPPORTED;
 }
